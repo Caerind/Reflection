@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<World>
+	<Actor name="Jack">
+		<Values size="3" i0="1.1" i1="3.14" i2="9.8" />
+		<Properties size="3" i0="debug||12.34" i1="sizex||800" i2="sizey||600" />
+		<Main name="Camera" count="48" />
+		<Components size="3">
+			<i0 name="Box" count="24" />
+			<i1 name="Audio" count="12" />
+			<i2 name="Shader" count="6" />
+		</Components>
+		<Used size="3" i0="Used1" i1="Used2" i2="Used3">
+			<Used1 name="Used1" count="123" />
+			<Used2 name="Used2" count="456" />
+			<Used3 name="Used3" count="789" />
+		</Used>
+	</Actor>
+</World>

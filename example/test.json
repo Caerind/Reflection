@@ -1,0 +1,56 @@
+{
+    "World": {
+        "Actor": {
+            "Components": {
+                "i0": {
+                    "count": "24",
+                    "name": "Box"
+                },
+                "i1": {
+                    "count": "12",
+                    "name": "Audio"
+                },
+                "i2": {
+                    "count": "6",
+                    "name": "Shader"
+                },
+                "size": "3"
+            },
+            "Main": {
+                "count": "48",
+                "name": "Camera"
+            },
+            "Properties": {
+                "i0": "debug||12.34",
+                "i1": "sizex||800",
+                "i2": "sizey||600",
+                "size": "3"
+            },
+            "Used": {
+                "Used1": {
+                    "count": "123",
+                    "name": "Used1"
+                },
+                "Used2": {
+                    "count": "456",
+                    "name": "Used2"
+                },
+                "Used3": {
+                    "count": "789",
+                    "name": "Used3"
+                },
+                "i0": "Used1",
+                "i1": "Used2",
+                "i2": "Used3",
+                "size": "3"
+            },
+            "Values": {
+                "i0": "1.1",
+                "i1": "3.14",
+                "i2": "9.8",
+                "size": "3"
+            },
+            "name": "Jack"
+        }
+    }
+}
