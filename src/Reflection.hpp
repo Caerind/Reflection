@@ -40,7 +40,7 @@ public:
         save("size", vector.size());
         for (std::size_t i = 0; i < vector.size(); ++i)
         {
-            save(toString(i), vector.at(i));
+            save("i" + toString(i), vector.at(i));
         }
         end();
 	}
@@ -51,7 +51,7 @@ public:
         save("size", vector.size());
         for (std::size_t i = 0; i < vector.size(); ++i)
         {
-            vector.at(i).serialize(*this, toString(i));
+            vector.at(i).serialize(*this, "i" + toString(i));
         }
         end();
 	}
@@ -63,7 +63,7 @@ public:
         std::size_t i = 0;
         for (auto itr = map.begin(); itr != map.end(); itr++)
         {
-            save(toString(i), std::string(toString(itr->first) + "||" + toString(itr->second)));
+            save("i" + toString(i), std::string(toString(itr->first) + "||" + toString(itr->second)));
             i++;
         }
         end();
@@ -77,7 +77,7 @@ public:
         for (auto itr = map.begin(); itr != map.end(); itr++)
         {
             std::string key = toString(itr->first);
-            save(toString(i), key);
+            save("i" + toString(i), key);
             itr->second.serialize(*this, key);
             i++;
         }
@@ -112,7 +112,7 @@ public:
                 for (std::size_t i = 0; i < size; ++i)
                 {
                     T value;
-                    if (!load(toString(i),value))
+                    if (!load("i" + toString(i),value))
                     {
                         value = T();
                         ret = false;
@@ -138,7 +138,7 @@ public:
                 for (std::size_t i = 0; i < size; ++i)
                 {
                     vector.push_back(T());
-                    if (!loadComplex(toString(i), vector.back()))
+                    if (!loadComplex("i" + toString(i), vector.back()))
                     {
                         ret = false;
                     }
@@ -162,7 +162,7 @@ public:
                 for (std::size_t i = 0; i < size; ++i)
                 {
                     std::string temp;
-                    if (load(toString(i), temp))
+                    if (load("i" + toString(i), temp))
                     {
                         std::size_t f = temp.find_first_of("||");
                         K k;
@@ -203,7 +203,7 @@ public:
                 for (std::size_t i = 0; i < size; ++i)
                 {
                     std::string key;
-                    if (load(toString(i), key))
+                    if (load("i" + toString(i), key))
                     {
                         T t;
                         if (!loadComplex(key, t))
