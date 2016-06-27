@@ -1,17 +1,14 @@
-# Reflection
-============
+## Reflection
 
 The goal of this library is to be easy to use and support XML and JSON with the same interface.
 
-Features :
-----------
+# Features :
 - XML and JSON systems
 - Simple interface
 - Serialize complex objects
 - Serialize std::vector<T> and std::map<K,T>
 
-Usage :
--------
+# Usage :
 
 ```c++
 class A : public ReflectionObject
@@ -71,13 +68,11 @@ int main()
 }
 ```
 
-Problems :
-----------
+# Problems :
 The support of both file format add few restrictions about the serialization. I had to find a way to make it "cross-file"
-Because of XML : Array and Map can't be parsed with the JSON standard.
-Because of JSON : You can't have few objects at the same node level with the same name.
+- Because of XML : Array and Map can't be parsed with the JSON standard.
+- Because of JSON : You can't have few objects at the same node level with the same name.
 
-Dependencies :
-----------
+# Dependencies :
 XML : https://github.com/zeux/pugixml
 JSON : https://github.com/nlohmann/json
