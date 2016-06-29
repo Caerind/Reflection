@@ -109,6 +109,7 @@ public:
             std::size_t size;
             if (load("size", size))
             {
+                vector.clear();
                 for (std::size_t i = 0; i < size; ++i)
                 {
                     T value;
@@ -135,6 +136,7 @@ public:
             std::size_t size;
             if (load("size", size))
             {
+                vector.clear();
                 for (std::size_t i = 0; i < size; ++i)
                 {
                     vector.push_back(T());
@@ -159,6 +161,7 @@ public:
             std::size_t size;
             if (load("size", size))
             {
+                map.clear();
                 for (std::size_t i = 0; i < size; ++i)
                 {
                     std::string temp;
@@ -200,6 +203,7 @@ public:
             std::size_t size;
             if (load("size", size))
             {
+                map.clear();
                 for (std::size_t i = 0; i < size; ++i)
                 {
                     std::string key;

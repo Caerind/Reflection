@@ -19,7 +19,7 @@ class XMLSystem : public ReflectionSystem
             m_filename = filename;
             if (erase)
             {
-                m_doc.append_child("World");
+                m_doc.append_child("Main");
                 saveDocument();
             }
             else
@@ -28,19 +28,20 @@ class XMLSystem : public ReflectionSystem
                 if (file)
                 {
                     m_doc.load(file);
-                    if (!m_doc.child("World"))
+                    if (!m_doc.child("Main"))
                     {
-                        m_doc.append_child("World");
+                        m_doc.append_child("Main");
                     }
                 }
                 else
                 {
+					m_doc.append_child("Main");
                     ret = false;
                 }
                 file.close();
             }
 
-            m_actualNode = m_doc.child("World");
+            m_actualNode = m_doc.child("Main");
             return ret;
         }
 

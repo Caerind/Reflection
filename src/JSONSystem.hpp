@@ -18,7 +18,7 @@ class JSONSystem : public ReflectionSystem
             m_filename = filename;
             if (erase)
             {
-                m_json["World"];
+                m_json["Main"];
                 saveDocument();
             }
             else
@@ -27,7 +27,7 @@ class JSONSystem : public ReflectionSystem
                 if (file)
                 {
                     file >> m_json;
-                    m_json["World"];
+                    m_json["Main"];
                 }
                 else
                 {
@@ -35,7 +35,7 @@ class JSONSystem : public ReflectionSystem
                 }
             }
             m_actualNode = &m_json;
-            create("World");
+            create("Main");
             return ret;
         }
 
